@@ -1,5 +1,5 @@
 {
-  "name": "inm320sbb_frontend_group8",
+  "name": "inm320sbb-frontend-group8",
   "version": "1.0.0",
   "scripts": {
     "goliteserver": "lite-server --baseDir=\"public\"",
