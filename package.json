@@ -1,0 +1,21 @@
+{
+  "name": "inm320sbb_frontend_group8",
+  "version": "1.0.0",
+  "scripts": {
+    "goliteserver": "lite-server --baseDir=\"public\"",
+    "start": "concurrently \"npm run goliteserver\" \"npm run helloscss\"",
+    "helloscss": "sass --watch src/scss:public/assets/css"
+  },
+  "author": "Hang Luu & Aaliya Khan",
+  "license": "private",
+  "private": true,
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "lite-server": "^2.6.1",
+    "sass": "^1.80.6"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}

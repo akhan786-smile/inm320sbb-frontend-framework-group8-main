@@ -1,0 +1,556 @@
+// Css precompiler
+$primary-color: rgba(37, 39, 51, 1);
+$secondary-color: rgba(159, 162, 180, 1);
+$accent-color: rgba(55, 81, 255, 1);
+$background-color: rgba(247, 248, 252, 1);
+$white-color: rgba(255, 255, 255, 1);
+$border-color: rgba(223, 224, 235, 1);
+$badge-warning: rgba(254, 196, 0, 1);
+$badge-success: rgba(41, 204, 151, 1);
+$badge-secondary: rgba(240, 241, 247, 1);
+$font-family: "Mulish", Helvetica, sans-serif;
+$font-size-small: 12px;
+$font-size-medium: 14px;
+$font-size-large: 15px;
+$font-size-xlarge: 20px;
+
+// Mixin for box-shadow
+@mixin box-shadow($color: rgba(0, 0, 0, 0.05), $blur: 3px) {
+  box-shadow: 0 1px $blur $color;
+}
+
+// Mobile Container Styling
+.mobile {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+// Header Styling
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: center;
+  transform: translateX(15%);
+  font-family: $font-family;
+  color: $primary-color;
+  font-size: $font-size-xlarge;
+  font-weight: 800;
+}
+
+.header-icons img {
+  margin-left: 10px;
+}
+
+.menu-icon {
+  width: 50px;
+  height: auto;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 3px solid $border-color;
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  background-color: $background-color;
+}
+
+// Ticket Card Styling
+.ticket-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.ticket-card {
+  background-color: $white-color;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  padding: 15px;
+  text-align: center;
+  flex: 1 1 45%;
+  @include box-shadow();
+}
+
+.ticket-card h5 {
+  color: $secondary-color;
+  font-family: $font-family;
+  font-size: $font-size-medium;
+  margin-bottom: 5px;
+}
+
+.ticket-card .number {
+  color: $primary-color;
+  font-size: 35px;
+  font-family: $font-family;
+  font-weight: 800;
+  margin: 0;
+}
+
+// Active Card Styling
+.ticket-card.active {
+  border: 2px solid $accent-color;
+}
+
+.ticket-card.active .number,
+.ticket-card.active h5 {
+  color: $accent-color;
+}
+
+// Today's Trends Section
+.todays-trends {
+  background-color: $white-color;
+  border-radius: 8px;
+  border: 1px solid $border-color;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.todays-trends h5 {
+  font-family: $font-family;
+  color: $primary-color;
+}
+
+.todays-trends p {
+  color: $secondary-color;
+  font-size: $font-size-small;
+}
+
+// Graph Help Styling
+.graph-help {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.graph-help .legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.graph-help .legend-line {
+  display: inline-block; 
+  width: 30px;
+  height: 4px; 
+  border-radius: 2px;
+}
+
+.graph-help .today-line {
+  background-color: #3751ff;
+}
+
+.graph-help .yesterday-line {
+  background-color: #c5c7cd; 
+}
+
+.graph-help span {
+  font-size: 14px;
+  color: #252733;
+  font-family: "Mulish", sans-serif; 
+}
+
+// Additional Info
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+
+  .info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+    font-family: $font-family;
+    color: $secondary-color;
+    font-size: $font-size-medium;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span:first-child {
+      color: $secondary-color;
+      font-size: $font-size-medium;
+    }
+
+    span:last-child {
+      font-family: $font-family;
+      font-weight: 800;
+      color: $primary-color;
+      font-size: $font-size-medium;
+    }
+  }
+}
+
+// Unresolved Tickets and Tasks
+.card-content {
+  background-color: $white-color;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  padding: 20px;
+  margin-bottom: 20px;
+  @include box-shadow();
+}
+
+.card-content h5 {
+  font-family: $font-family;
+  color: $primary-color;
+  margin-bottom: 5px;
+}
+
+.card-content a {
+  font-size: $font-size-medium;
+  color: $accent-color;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.card-content p {
+  color: $secondary-color;
+  font-size: $font-size-small;
+  margin-bottom: 15px;
+}
+
+// Unresolved Tickets Specific Styling
+.card-content-unresolved {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid $border-color;
+    font-family: $font-family;
+    font-size: $font-size-medium;
+    color: $primary-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span:last-child {
+      font-family: $font-family;
+      font-weight: 400;
+      color: $secondary-color;
+    }
+  }
+}
+
+// Task-specific styling adjustments
+.card-content-tasks {
+  .create-task-placeholder {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    color: #9fa2b4; 
+    font-size: 14px; 
+    margin-bottom: 10px; 
+    cursor: pointer;
+
+    img {
+      width: 16px;
+      height: 16px;
+      margin-left: 0; 
+    }
+  }
+
+  .task-list {
+    padding: 0;
+    margin: 0;
+  }
+
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .task-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .task-circle {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #c5c7cd; 
+      border-radius: 50%;
+
+      &.completed {
+        background-color: #3751ff;
+        border-color: #3751ff;
+      }
+    }
+  }
+}
+
+// Badge Styling
+.badge {
+  padding: 3px 8px; 
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+
+  &.badge-warning {
+    background-color: #fec400; 
+    color: #ffffff; 
+  }
+
+  &.badge-success {
+    background-color: #29cc97;
+    color: #ffffff; 
+  }
+
+  &.badge-secondary {
+    background-color: #f0f1f7; 
+    color: #9fa2b4;
+  }
+}
+
+//desktop///////////////////
+// Desktop Container Styling
+@media (min-width: 768px) {
+  .mobile {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+  }
+
+  // Header Styling
+  .header-container {
+    padding: 20px 40px;
+  }
+
+  .header-title {
+    font-size: $font-size-xlarge * 1.5;
+    transform: translateX(0);
+  }
+  .header-icons img {
+    margin-left: 30px;
+    background-color: #3751ff;
+    justify-content: space-between;
+  }
+  
+
+  .menu-icon {
+    width: 60px;
+  }
+
+  .avatar {
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    border-radius: 50%;
+    
+  }
+
+  // Ticket Card Styling
+  .ticket-blocks {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .ticket-card {
+    flex: 1 1 30%;
+    padding: 30px;
+  }
+
+  .ticket-card h5 {
+    font-size: $font-size-large;
+  }
+
+  .ticket-card .number {
+    font-size: 40px;
+  }
+
+  // Today's Trends Section
+  .todays-trends {
+    padding: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+    
+    
+  }
+
+  .todays-trends h5 {
+    font-size: $font-size-large;
+    display: flex;
+    
+    
+;
+   
+  }
+
+  // Graph Help Styling
+  .graph-help {
+    gap: 30px;
+    margin-bottom: 25px;
+  }
+
+  .graph-help span {
+    font-size: $font-size-large;
+  }
+
+  // Additional Info
+  .additional-info {
+    padding-top: 20px;
+
+    .info-row {
+      padding: 15px 0;
+      font-size: $font-size-large;
+    }
+  }
+
+  // Unresolved Tickets and Tasks
+  .card-content {
+    padding: 30px;
+    margin-bottom: 40px;
+  }
+
+  .card-content h5 {
+    font-size: $font-size-large;
+  }
+
+  .card-content a {
+    font-size: $font-size-large;
+  }
+
+  .card-content p {
+    font-size: $font-size-medium;
+  }
+
+  // Unresolved Tickets Specific Styling
+  .card-content-unresolved {
+    li {
+      padding: 10px 0;
+      font-size: $font-size-large;
+    }
+  }
+
+  // Task-specific styling adjustments
+  .card-content-tasks {
+    .create-task-placeholder {
+      font-size: $font-size-large;
+    }
+
+    .task-item {
+      padding: 15px 0;
+    }
+  }
+
+  // Badge Styling
+  .badge {
+    font-size: 12px;
+  }
+}
+///////side bar
+:root {
+  --main-text-color: #DDE2FF;
+  --second-text-color: #bbbec5;
+}
+
+.primary-text, 
+.second-text {
+  color: #A4A6B3;
+}
+
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+#wrapper {
+  overflow-x: hidden;
+  
+  
+
+  &.toggled #sidebar-wrapper {
+    margin-left: 0;
+  }
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+  background-color: #363740;
+
+  .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+  }
+
+  .list-group {
+    width: 15rem;
+  }
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#menu-toggle {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 30px;
+
+  &.active {
+    background-color: transparent;
+    color: var(--main-text-color);
+    font-weight: bold;
+    border: #DDE2FF;
+  }
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+    margin-right: 50px;
+    padding-right: 50px;
+    justify-content: space-between;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
