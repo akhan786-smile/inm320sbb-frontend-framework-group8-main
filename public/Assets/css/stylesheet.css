@@ -326,25 +326,79 @@
     padding: 30px;
     margin-bottom: 40px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: flex-start;
   }
-  .todays-trends h5 {
-    font-size: 15px;
+  .d-flex {
     display: flex;
+    align-items: center;
   }
+  /* Align the legend with the timestamp in one row on desktop only */
   .graph-help {
-    gap: 30px;
-    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
   }
-  .graph-help span {
-    font-size: 15px;
+  .graph-help .legend {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
   }
+  .legend-line {
+    width: 20px;
+    height: 4px;
+    display: inline-block;
+    border-radius: 2px;
+  }
+  .today-line {
+    background-color: #3751ff;
+  }
+  .yesterday-line {
+    background-color: #c5c7cd;
+  }
+  .text-muted {
+    margin-bottom: 0;
+    flex-grow: 1;
+  }
+  /* Additional Information Section Styling for Desktop Only */
   .additional-info {
-    padding-top: 20px;
+    border: 1px solid rgb(223, 224, 235);
+    border-radius: 8px;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
   }
-  .additional-info .info-row {
-    padding: 15px 0;
-    font-size: 15px;
+  .additional-info .content-wrapper {
+    padding: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .additional-info .divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(223, 224, 235);
+    margin: 12px 0;
+  }
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  /* Text Styling */
+  .info-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgb(159, 162, 180);
+    margin-bottom: 4px;
+  }
+  .info-value {
+    font-weight: 700;
+    font-size: 24px;
+    color: rgb(37, 39, 51);
   }
   .card-content {
     padding: 30px;

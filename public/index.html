@@ -107,45 +107,67 @@
             </div>
         </section>
 
-        <!-- Today's Trends Section -->
-        <section class="card p-4 mb-4">
-            <h5>Today's trends</h5>
-            <p class="text-muted">as of 25 May 2019, 09:41 PM</p>
-            <div class="d-flex justify-content-between mb-3 graph-help">
-                <div class="legend d-flex align-items-center">
+       <!-- Today's Trends Section with Chart and Additional Information -->
+       <section class="card p-4 mb-4">
+        <h5>Today's trends</h5>
+        
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <p class="text-muted mb-0">as of 25 May 2019, 09:41 PM</p>
+            <div class="graph-help d-flex align-items-center">
+                <div class="legend d-flex align-items-center me-4">
                     <span class="legend-line today-line"></span>
-                    <span class="ml-2">Today</span>
+                    <span class="ms-2">Today</span>
                 </div>
                 <div class="legend d-flex align-items-center">
                     <span class="legend-line yesterday-line"></span>
-                    <span class="ml-2">Yesterday</span>
+                    <span class="ms-2">Yesterday</span>
                 </div>
             </div>
-            <img src="Assets/Images/full graph.svg" alt="Graph Image" class="img-fluid mb-3">
-            <!-- Additional Information Section -->
-            <div>
-                <div class="info-row d-flex justify-content-between border-top pt-2">
-                    <span>Resolved</span>
-                    <span>449</span>
-                </div>
-                <div class="info-row d-flex justify-content-between border-top pt-2">
-                    <span>Received</span>
-                    <span>426</span>
-                </div>
-                <div class="info-row d-flex justify-content-between border-top pt-2">
-                    <span>Average first response time</span>
-                    <span>33m</span>
-                </div>
-                <div class="info-row d-flex justify-content-between border-top pt-2">
-                    <span>Average response time</span>
-                    <span>3h 8m</span>
-                </div>
-                <div class="info-row d-flex justify-content-between border-top pt-2">
-                    <span>Resolution within SLA</span>
-                    <span>94%</span>
+        </div>
+    
+        <div class="row">
+            <!-- Left side: Chart -->
+            <div class="col-lg-8">
+                <img src="Assets/Images/full graph.svg" alt="Graph Image" class="img-fluid mb-3">
+            </div>
+    
+            <!-- Right side: Additional Information -->
+            <div class="col-lg-4 d-flex justify-content-end">
+                <div class="additional-info w-100">
+                    <div class="content-wrapper">
+                        <div class="info-item">
+                            <span class="info-title">Resolved</span>
+                            <span class="info-value">449</span>
+                        </div>
+                        <div class="divider-line"></div>
+    
+                        <div class="info-item">
+                            <span class="info-title">Received</span>
+                            <span class="info-value">426</span>
+                        </div>
+                        <div class="divider-line"></div>
+    
+                        <div class="info-item">
+                            <span class="info-title">Average first response time</span>
+                            <span class="info-value">33m</span>
+                        </div>
+                        <div class="divider-line"></div>
+    
+                        <div class="info-item">
+                            <span class="info-title">Average response time</span>
+                            <span class="info-value">3h 8m</span>
+                        </div>
+                        <div class="divider-line"></div>
+    
+                        <div class="info-item">
+                            <span class="info-title">Resolution within SLA</span>
+                            <span class="info-value">94%</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Unresolved Tickets and Tasks Section -->
         <div class="row">
