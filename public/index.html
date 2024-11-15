@@ -19,56 +19,17 @@
 </head>
 
 <body>
-   <!--side bar-->
-   <div class="d-flex" id="wrapper">
-    <!-- Sidebar -->
-    <div class="bg-red" id="sidebar-wrapper">
-        <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-regular text-bold border-bottom">
-            <img src="Assets/Images/logo.svg" alt="Sideboard icon" class="icon mx-2"> Dashboard kit</div>
-        <div class="list-group list-group-flush my-3">
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active">
-                <img src="Assets/Images/1. overview.svg" alt="Overview icon" class="icon mx-2">Overview</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <img src="Assets/Images/2. tickets.svg" alt="Tickets icon" class="icon mx-2">  Tickets</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <img src="Assets/Images/3. ideas.svg" alt="Ideas" class="icon mx-2">  Ideas</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <img src="Assets/Images/4. contacts.svg" alt="contact icon" class="icon mx-2"> contact</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <img src="Assets/Images/5. agents.svg" alt="Agent icon" class="icon mx-2"> Agent</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <img src="Assets/Images/6. articles.svg" alt="Articles icon" class="icon mx-2">Articles</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <img src="Assets/Images/a_1. settings.svg" alt="Settings icon" class="icon mx-2">Settings</a>
-            <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
-                <img src="Assets/Images/a_2. subscription.svg" alt="Search icon" class="icon mx-2">Subscription</a>
-            
+    <!-- Header Section -->
+     <header class="d-flex justify-content-between align-items-center p-3 border-bottom">
+        <img src="Assets/Images/Sidebard.svg" alt="Menu icon" class="menu-icon">
+        <h1 class="h5 mb-0">Overview</h1>
+        <div class="d-flex align-items-center">
+            <img src="Assets/Images/search.svg" alt="Search icon" class="icon mx-2">
+            <img src="Assets/Images/new.svg" alt="Notification icon" class="icon mx-2">
+            <img src="Assets/Images/user.png" alt="User Avatar" class="avatar">
         </div>
-    </div>
-    <div id="page-content-wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
-            <div class="d-flex align-items-center">
-                <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
-                <h2 class="fs-2 m-0">Overview</h2>
-            </div>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <header class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <a class="nav-link dropdown-toggle second-text fw-regular" href="#" id="navbarDropdown">
-                            <img src="Assets/Images/search.svg" alt="Search icon" class="icon mx-2">
-                            <img src="Assets/Images/new.svg" alt="Notification icon" class="icon mx-2">
-                            <img src="Assets/Images/user 22.svg" alt="avtar" class="icon mx-2">
-                        </a>
-                </ul>
-            </header>
-      </nav>
-
+    </header>
+    
     <!-- Main Content Section -->
     <main class="container mt-4">
         <!-- Ticket Blocks Section -->
@@ -101,67 +62,63 @@
 
        <!-- Today's Trends Section with Chart and Additional Information -->
        <section class="card p-4 mb-4 padding-right">
-
-    
-        <div class="row">
-            <!-- Left side: Chart -->
-
-
-            <div class="col-lg-8 section-heading">
-                <h5 class="today-trend">Today's trends</h5>
-                <div class="d-flex justify-content-between align-items-center mb-3 today-trend">
-                    <p class="text-muted mb-0">as of 25 May 2019, 09:41 PM</p>
-                    <div class="graph-help">
-                        <div class="legend d-flex align-items-center me-4">
-                            <span class="legend-line today-line"></span>
-                            <span class="ms-2">Today</span>
-                        </div>
-                        <div class="legend d-flex align-items-center">
-                            <span class="legend-line yesterday-line"></span>
-                            <span class="ms-2">Yesterday</span>
+            <div class="row">
+                <!-- Left side: Chart -->
+                <div class="col-lg-8 section-heading">
+                    <h5 class="today-trend">Today's trends</h5>
+                    <div class="d-flex justify-content-between align-items-center mb-3 today-trend">
+                        <p class="text-muted mb-0">as of 25 May 2019, 09:41 PM</p>
+                        <div class="graph-help">
+                            <div class="legend d-flex align-items-center me-4">
+                                <span class="legend-line today-line"></span>
+                                <span class="ms-2">Today</span>
+                            </div>
+                            <div class="legend d-flex align-items-center">
+                                <span class="legend-line yesterday-line"></span>
+                                <span class="ms-2">Yesterday</span>
+                            </div>
                         </div>
                     </div>
+                    <img src="Assets/Images/full graph.svg" alt="Graph Image" class="img-fluid mb-3 chart-image">
                 </div>
-                <img src="Assets/Images/full graph.svg" alt="Graph Image" class="img-fluid mb-3 chart-image">
-            </div>
-    
-            <!-- Right side: Additional Information -->
-            <div class="col-lg-4 d-flex justify-content-end">
-                <div class="additional-info w-100">
-                    <div class="content-wrapper">
-                        <div class="info-item">
-                            <span class="info-title">Resolved</span>
-                            <span class="info-value">449</span>
-                        </div>
-                        <div class="divider-line"></div>
-    
-                        <div class="info-item">
-                            <span class="info-title">Received</span>
-                            <span class="info-value">426</span>
-                        </div>
-                        <div class="divider-line"></div>
-    
-                        <div class="info-item">
-                            <span class="info-title">Average first response time</span>
-                            <span class="info-value">33m</span>
-                        </div>
-                        <div class="divider-line"></div>
-    
-                        <div class="info-item">
-                            <span class="info-title">Average response time</span>
-                            <span class="info-value">3h 8m</span>
-                        </div>
-                        <div class="divider-line"></div>
-    
-                        <div class="info-item">
-                            <span class="info-title">Resolution within SLA</span>
-                            <span class="info-value">94%</span>
+        
+                <!-- Right side: Additional Information -->
+                <div class="col-lg-4 d-flex justify-content-end">
+                    <div class="additional-info w-100">
+                        <div class="content-wrapper">
+                            <div class="info-item">
+                                <span class="info-title">Resolved</span>
+                                <span class="info-value">449</span>
+                            </div>
+                            <div class="divider-line"></div>
+        
+                            <div class="info-item">
+                                <span class="info-title">Received</span>
+                                <span class="info-value">426</span>
+                            </div>
+                            <div class="divider-line"></div>
+        
+                            <div class="info-item">
+                                <span class="info-title">Average first response time</span>
+                                <span class="info-value">33m</span>
+                            </div>
+                            <div class="divider-line"></div>
+        
+                            <div class="info-item">
+                                <span class="info-title">Average response time</span>
+                                <span class="info-value">3h 8m</span>
+                            </div>
+                            <div class="divider-line"></div>
+        
+                            <div class="info-item">
+                                <span class="info-title">Resolution within SLA</span>
+                                <span class="info-value">94%</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
-         </section>
+        </section>
 
         <!-- Unresolved Tickets and Tasks Section -->
         <div class="row">
