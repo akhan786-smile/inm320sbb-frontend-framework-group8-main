@@ -331,9 +331,11 @@
   }
   .d-flex {
     display: flex;
-    align-items: center;
   }
   /* Align the legend with the timestamp in one row on desktop only */
+  .today-trend {
+    margin-left: 20px;
+  }
   .graph-help {
     display: flex;
     align-items: center;
@@ -359,13 +361,30 @@
     margin-bottom: 0;
     flex-grow: 1;
   }
+  .chart-image {
+    margin-top: 5px;
+    width: 100%;
+    max-height: 600px;
+    padding-right: 40px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+  }
+  .padding-right {
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+  .section-heading {
+    margin-top: 30px;
+  }
   /* Additional Information Section Styling for Desktop Only */
   .additional-info {
     border: 1px solid rgb(223, 224, 235);
-    border-radius: 8px;
-    padding: 0;
-    box-sizing: border-box;
+    border-radius: 0 6px 6px 0;
+    margin-top: 0 !important;
     display: flex;
+    margin-right: -1px;
+    flex-direction: column;
     justify-content: center;
   }
   .additional-info .content-wrapper {
