@@ -332,6 +332,9 @@
   .d-flex {
     display: flex;
   }
+  .p-3 {
+    padding: 30px !important;
+  }
   /* Align the legend with the timestamp in one row on desktop only */
   .today-trend {
     margin-left: 20px;

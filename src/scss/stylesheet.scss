@@ -333,7 +333,6 @@ $font-size-xlarge: 20px;
     color: #9fa2b4;
   }
 }
-
 //desktop///////////////////
 // Desktop Container Styling
 @media (min-width: 768px) {
@@ -403,6 +402,9 @@ $font-size-xlarge: 20px;
     display: flex;
   }
 
+  .p-3{
+    padding: 30px !important;
+  }
   /* Align the legend with the timestamp in one row on desktop only */
   .today-trend {
     margin-left: 20px;
